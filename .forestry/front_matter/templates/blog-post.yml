@@ -5,18 +5,12 @@ fields:
 - type: text
   name: title
   label: title
-- type: text
-  name: description
-  label: description
 - type: datetime
   name: date
   label: date
 - type: text
-  name: aliases
-  label: aliases
-- type: text
-  name: featured_image
-  label: featured_image
+  name: description
+  label: description
 - type: list
   name: tags
   label: tags
