@@ -1,0 +1,5 @@
+[permalinks]
+  blog = ":slug"
+  blog = "/:year/:month/:title"
+
+Custom index => /layouts/index.html

@@ -1,0 +1,34 @@
+{{ define "main" }}
+
+  {{ if isset .Params "featured_image" }}
+  <img src="{{ .Params.featured_image }}" alt="{{ .Title }}" width="200">
+  <hr>
+  {{ end }}
+
+  <h1>{{ .Title }}</h1>
+  <div>{{ .Content }}</div>
+  <span> {{ .Date.Format "2006-01-02" }} </span>
+
+  <hr>
+  {{ with .Params.Tags }}
+    <ul>
+      {{ range . }}
+        <li>
+          <a href="/tags/{{ . | urlize }}"> {{ . }} </a>
+        </li>
+      {{ end }}
+    </ul>
+  {{ end }}
+
+  <div id="disqus_thread"></div>
+  <script>
+    (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://first-hugo-site.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/ref_noscript">comments powered by Disqus.</a></noscript>
+
+{{ end }}

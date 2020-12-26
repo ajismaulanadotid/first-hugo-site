@@ -1,0 +1,15 @@
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/e-book">E-Book</a></li>
+  </ul>
+</nav>
+
+{{ if .IsHome }}
+  <p>Welcome home</p>
+{{ end }}
+
+{{ if .IsPage }}
+  <p>IsPage</p>
+{{ end }}
